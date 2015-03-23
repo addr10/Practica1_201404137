@@ -1,8 +1,202 @@
 import java.util.Random;
 import java.util.Scanner;
-
+//German Adrian Ruano Alegria
+//201404137
+//IPC1A
 
 public class Practica1 {
+	
+	public static void aLetra(int numero){
+		if (numero>=0&&numero<=29){
+			switch(numero){
+			case 0:
+				System.out.println("Cero");
+				break;
+			case 1:
+				System.out.println("Uno");
+				break;
+			case 2:
+				System.out.println("Dos");
+				break;
+			case 3:
+				System.out.println("Tres");
+				break;
+			case 4:
+				System.out.println("Cuatro");
+				break;
+			case 5:
+				System.out.println("Cinco");
+				break;
+			case 6:
+				System.out.println("Seis");
+				break;
+			case 7:
+				System.out.println("Siete");
+				break;
+			case 8:
+				System.out.println("Ocho");
+				break;
+			case 9:
+				System.out.println("Nueve");
+				break;
+			case 10:
+				System.out.println("Diez");
+				break;
+			case 11:
+				System.out.println("Once");
+				break;
+			case 12:
+				System.out.println("Doce");
+				break;
+			case 13:
+				System.out.println("Trece");
+				break;
+			case 14:
+				System.out.println("Catorce");
+				break;
+			case 15:
+				System.out.println("Quince");
+				break;
+			case 16:
+				System.out.println("Dieciceis");
+				break;
+			case 17:
+				System.out.println("Diecisiete");
+				break;
+			case 18:
+				System.out.println("Dieciocho");
+				break;
+			case 19:
+				System.out.println("Diecinueve");
+				break;
+			case 20:
+				System.out.println("Veinte");
+				break;
+			case 21:
+				System.out.println("Veintiuno");
+				break;
+			case 22:
+				System.out.println("Veintidos");
+				break;
+			case 23:
+				System.out.println("Veintitres");
+				break;
+			case 24:
+				System.out.println("Veinticuatro");
+				break;
+			case 25:
+				System.out.println("Veinticinco");
+				break;
+			case 26:
+				System.out.println("Veintiseis");
+				break;
+			case 27:
+				System.out.println("Veintisiete");
+				break;
+			case 28:
+				System.out.println("Veintiocho");
+				break;
+			case 29:
+				System.out.println("Veintinueve");
+				break;
+			}
+		}
+		else if (numero>=30&&numero<=99){
+			int d=numero/10;
+			int u=numero%10;
+			switch (d){
+			case 3:
+				System.out.print("Treinta");
+				break;
+			case 4:
+				System.out.print("Cuarenta");
+				break;
+			case 5:
+				System.out.print("Cincuenta");
+				break;
+			case 6:
+				System.out.print("Sesenta");
+				break;
+			case 7:
+				System.out.print("Setenta");
+				break;
+			case 8:
+				System.out.print("Ochenta");
+				break;
+			case 9:
+				System.out.print("Noventa");
+				break;
+			}
+			switch (u){
+			case 1:
+				System.out.print(" y Uno");
+				break;
+			case 2:
+				System.out.print(" y Dos");
+				break;
+			case 3:
+				System.out.print(" y Tres");
+				break;
+			case 4:
+				System.out.print(" y Cuatro");
+				break;
+			case 5:
+				System.out.print(" y Cinco");
+				break;
+			case 6:
+				System.out.print(" y Seis");
+				break;
+			case 7:
+				System.out.print(" y Siete");
+				break;
+			case 8:
+				System.out.print(" y Ocho");
+				break;
+			case 9:
+				System.out.print(" y Nueve");
+				break;
+			case 0:
+				System.out.print("");
+				break;
+			}
+			System.out.println();
+		}
+		else if (numero==100)
+			System.out.println("Cien");
+		else
+			System.out.println("Numero Erroneo");
+	}
+	
+	public static int aDecimal(String romano1){
+		String romano=romano1.toUpperCase();
+		int dec=0;
+		for(int car=0;car<romano.length();car++){
+			char l=romano.charAt(car);
+			switch (l){
+			case 'I':
+				dec+=1;
+				break;
+			case 'V':
+				dec+=5;
+				break;
+			case 'X':
+				dec+=10;
+				break;
+			case 'L':
+				dec+=50;
+				break;
+			case 'C':
+				dec+=100;
+				break;
+			}
+		}
+		if (romano.contains("IV")) dec-=2;
+		if (romano.contains("IX")) dec-=2;
+		if (romano.contains("XL")) dec-=20;
+		if (romano.contains("XC")) dec-=20;
+	    return dec;
+	    
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -195,164 +389,7 @@ public class Practica1 {
 				Random random = new Random(); 
 				
 				int num = random.nextInt(sup-inf+1) + inf;
-				if (num>=0&&num<=29){
-					switch(num){
-					case 0:
-						System.out.println("Cero");
-						break;
-					case 1:
-						System.out.println("Uno");
-						break;
-					case 2:
-						System.out.println("Dos");
-						break;
-					case 3:
-						System.out.println("Tres");
-						break;
-					case 4:
-						System.out.println("Cuatro");
-						break;
-					case 5:
-						System.out.println("Cinco");
-						break;
-					case 6:
-						System.out.println("Seis");
-						break;
-					case 7:
-						System.out.println("Siete");
-						break;
-					case 8:
-						System.out.println("Ocho");
-						break;
-					case 9:
-						System.out.println("Nueve");
-						break;
-					case 10:
-						System.out.println("Diez");
-						break;
-					case 11:
-						System.out.println("Once");
-						break;
-					case 12:
-						System.out.println("Doce");
-						break;
-					case 13:
-						System.out.println("Trece");
-						break;
-					case 14:
-						System.out.println("Catorce");
-						break;
-					case 15:
-						System.out.println("Quince");
-						break;
-					case 16:
-						System.out.println("Dieciceis");
-						break;
-					case 17:
-						System.out.println("Diecisiete");
-						break;
-					case 18:
-						System.out.println("Dieciocho");
-						break;
-					case 19:
-						System.out.println("Diecinueve");
-						break;
-					case 20:
-						System.out.println("Veinte");
-						break;
-					case 21:
-						System.out.println("Veintiuno");
-						break;
-					case 22:
-						System.out.println("Veintidos");
-						break;
-					case 23:
-						System.out.println("Veintitres");
-						break;
-					case 24:
-						System.out.println("Veinticuatro");
-						break;
-					case 25:
-						System.out.println("Veinticinco");
-						break;
-					case 26:
-						System.out.println("Veintiseis");
-						break;
-					case 27:
-						System.out.println("Veintisiete");
-						break;
-					case 28:
-						System.out.println("Veintiocho");
-						break;
-					case 29:
-						System.out.println("Veintinueve");
-						break;
-					}
-				}
-				else if (num>=30&&num<=99){
-					int d=num/10;
-					int u=num%10;
-					switch (d){
-					case 3:
-						System.out.print("Treinta");
-						break;
-					case 4:
-						System.out.print("Cuarenta");
-						break;
-					case 5:
-						System.out.print("Cincuenta");
-						break;
-					case 6:
-						System.out.print("Sesenta");
-						break;
-					case 7:
-						System.out.print("Setenta");
-						break;
-					case 8:
-						System.out.print("Ochenta");
-						break;
-					case 9:
-						System.out.print("Noventa");
-						break;
-					}
-					switch (u){
-					case 1:
-						System.out.print(" y Uno");
-						break;
-					case 2:
-						System.out.print(" y Dos");
-						break;
-					case 3:
-						System.out.print(" y Tres");
-						break;
-					case 4:
-						System.out.print(" y Cuatro");
-						break;
-					case 5:
-						System.out.print(" y Cinco");
-						break;
-					case 6:
-						System.out.print(" y Seis");
-						break;
-					case 7:
-						System.out.print(" y Siete");
-						break;
-					case 8:
-						System.out.print(" y Ocho");
-						break;
-					case 9:
-						System.out.print(" y Nueve");
-						break;
-					case 0:
-						System.out.print("");
-						break;
-					}
-					System.out.println();
-				}
-				else if (num==0)
-					System.out.println("Cien");
-				else
-					System.out.println("Numero Erroneo");
+				aLetra(num);
 				scan.close(); 
 			}
 			else if (ejercicio==9){
@@ -524,16 +561,40 @@ public class Practica1 {
 			}
 			else if (ejercicio==11){
 				System.out.println("Ejercicio #"+ejercicio);
-				System.out.println("Aun no Disponible");
+				Scanner scan=new Scanner(System.in);
+				System.out.println("Ingrese la cantidad de numeros que ingresara:");
+				int total= scan.nextInt();
+				String numero;
+				int n;
+				int mayor=Integer.MIN_VALUE;
+				int menor=Integer.MAX_VALUE;
+				System.out.println("Ingrese los Numeros Romanos:");
+				for(int i=1;i<=total;i++){
+					numero=scan.next();
+					n=aDecimal(numero);
+					if (n>mayor)
+						mayor=n;
+					if (n<menor)
+						menor=n;
+				}
+				System.out.print("Menor: ");
+				aLetra(menor);
+				System.out.print("Mayor: ");
+				aLetra(mayor);
+				scan.close(); 
 			}
 			else if (ejercicio==12){
 				System.out.println("Ejercicio #"+ejercicio);
 				Scanner scan=new Scanner(System.in);
-				System.out.println("Ingrese Contraseña:");
 				String pal=scan.nextLine();
-				int contra=pal.length();
-				for(int i=0;i<contra;i++)
-					System.out.print("*");
+				for(int i=0;i<pal.length();i++){
+					char con=pal.charAt(i);
+					if (con!=' ')
+						System.out.print("*");
+					else
+						System.out.print(" ");
+				}
+					
 				System.out.println();
 				scan.close(); 
 				
@@ -544,11 +605,12 @@ public class Practica1 {
 				System.out.println("Ingrese Una Letra");
 				char letra=scan.next().charAt(0);
 				int x=Character.getNumericValue(letra);
-				int m;
+				int m,r;
+				char j;
 				System.out.println("Adivine la letra!");
 				do{
-				char j=scan.next().charAt(0);
-				int r=Character.getNumericValue(j);
+				j=scan.next().charAt(0);
+				r=Character.getNumericValue(j);
 				if (r<x)
 					System.out.println("Antes");
 				else if (r>x)
@@ -584,7 +646,20 @@ public class Practica1 {
 			}
 			else if (ejercicio==15){
 				System.out.println("Ejercicio #"+ejercicio);
-				System.out.println("Aun no Disponible");
+				Scanner scan=new Scanner(System.in);
+				System.out.println("Ingrese un numero:");
+				int num=scan.nextInt();
+				int cont=0;
+				for(int i=2; i<=num;i++){
+					for(int j=2; j<i;j++){
+						if (i%j==0){
+							cont++;
+							break;
+						}
+					}
+				}
+				System.out.println("Entre 1 y "+num+" hay "+(num-cont)+" Numeros");
+				scan.close();
 			}
 			else
 				System.out.println("El Nivel 2 solo contiene los Ejercicios 6-15");
